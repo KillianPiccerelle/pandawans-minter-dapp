@@ -1,10 +1,16 @@
 import type { NextPage } from 'next';
+import { MainLayout } from '../components/MainLayout';
+import { HeaderMenu } from '../components/HeaderMenu';
+
+import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
 
 const Home: NextPage = () => {
   return (
-    <div className="h-100 bg-gradient-to-r from-bgStripes to-darkBase">
-      <p>test ceci est</p>
-    </div>
+    <MainLayout>
+      <div className="h-screen">
+        <HeaderMenu></HeaderMenu>
+      </div>
+    </MainLayout>
   );
 };
 

@@ -28,7 +28,19 @@ module.exports = {
       heading: 'Poppins, sans-serif',
       body: 'Poppins, sans-serif',
     },
-    extend: {},
+    fontSize: {
+      xxs: ['10px', '14px'],
+    },
+    screens: {
+      xsm: '515px',
+      mlg: '800px',
+    },
+    extend: {
+      height: {
+        30: '120px',
+        17: '70px',
+      },
+    },
   },
   variants: {
     extend: {},
