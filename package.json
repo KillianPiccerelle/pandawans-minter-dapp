@@ -1,6 +1,13 @@
 {
-  "name": "pandawans-nft-minter-nextjs-dapp",
-  "version": "0.1.0",
+  "name": "pandawans-dapp",
+  "version": "0.0.1",
+  "author": "Killian Piccerelle",
+  "license": "MIT",
+  "homepage": "https://pandawans.netlify.app/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KillianPiccerelle/pandawans-minter-dapp"
+  },
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -10,7 +17,7 @@
     "format": "prettier --write '**/*.{js,ts,tsx,json}'"
   },
   "dependencies": {
-    "@elrondnetwork/erdjs": "^5.0.1",
+    "@elrondnetwork/erdjs": "10.2.2",
     "@elrondnetwork/erdjs-extension-provider": "2.0.1",
     "@elrondnetwork/erdjs-hw-provider": "2.0.1",
     "@elrondnetwork/erdjs-network-providers": "0.1.5",
@@ -46,7 +53,7 @@
     "@types/react": "17.0.38",
     "autoprefixer": "^10.4.7",
     "eslint": "8.7.0",
-    "eslint-config-next": "12.1.6",
+    "eslint-config-next": "12.0.8",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-valtio": "0.4.2",
     "postcss": "^8.4.14",
