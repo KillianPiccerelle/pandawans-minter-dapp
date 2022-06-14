@@ -1,34 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+### Elven Tools Dapp
 
-## Getting Started
+- Docs: [elven.tools/docs/landing-page.html](https://www.elven.tools/docs/landing-page.html)
+- Demo: [dapp-demo.elven.tools](https://dapp-demo.elven.tools)
+- Sneak peek: [youtu.be/ATSxD3mD4dc](https://youtu.be/ATSxD3mD4dc)
 
-First, run the development server:
+The Dapp is built using Nextjs and a couple of helpful tools. It allows you to interact with the Elrond blockchain, smart contracts, and especially it is prepared for the [Elven Tools Smart Contract](https://github.com/ElvenTools/elven-nft-minter-sc). But you can always modify it and adjust for your needs.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+### It provides:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Auth with 4 Elrond blockchain providers
+  - Web Wallet
+  - Maiar mobile app
+  - Maiar DeFi browser extension
+  - Ledger Nano
+- React hooks for making transactions
+- React hooks for querying smart contracts
+- Tools and React hooks for app state synchronization
+- API endpoint rewrites and 'guard' middleware
+- Preconfigured UI based on Chakra UI
+- The template with sections mainly used on minter dapps (it will be developed further)
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### Tracking the progress
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- [Elven Tools Dapp kanban](https://github.com/orgs/ElvenTools/projects/2)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### How to start it locally:
 
-## Learn More
+1. npm install -g elven-tools
+2. elven-tools init-dapp
+3. cd your-dapp-directory
+4. npm run dev
 
-To learn more about Next.js, take a look at the following resources:
+--- or ---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. clone or download the repo code
+2. cd elven-tools-dapp
+3. npm install
+4. configure .env.local (you can copy the contents of the .env.example)
+5. npm run dev
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Check detailed docs on it here: [How to start with the Dapp](https://www.elven.tools/docs/how-to-start-with-the-dapp.html)
 
-## Deploy on Vercel
+### Main assumption for the dapp:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- it works on Nextjs
+- it uses erdjs 10.\* without the dapp-core library.
+  it uses backend side rewrites to hide the API endpoint. The only exposed one is `/api`
+- it uses .env file - there is an example in the repo
+- it uses a couple of config files in the 'config' directory (it will be simplified in the future)
+- it uses chakra-ui
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+More docs on it: [Minter Dapp introduction](https://www.elven.tools/docs/minter-dapp-introduction.html)
+
+### Community
+
+- Example with auth verification on the backend side: [elven-tools-dapp-with-auth](https://github.com/borispoehland/elven-tools-dapp-with-auth) thanks to [@borispoehland](https://github.com/borispoehland)
