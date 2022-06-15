@@ -14,6 +14,7 @@ module.exports = {
       darker: '#1d222a',
       light: '#FAFFFD',
       white: '#ffffff',
+      backAlpha700: 'rgba(0, 0, 0, 0.64)',
       color1Lighter: '#c7dcfa',
       color1Base: '#92bdf8',
       color1Darker: '#5d9ef6',
@@ -24,12 +25,18 @@ module.exports = {
       color3Base: '#FA824C',
       color3Darker: '#f9611c',
     },
+    borderWidth: {
+      0.5: '0.5px',
+    },
     fontFamily: {
       heading: 'Poppins, sans-serif',
       body: 'Poppins, sans-serif',
     },
     fontSize: {
       xxs: ['10px', '14px'],
+    },
+    minWidth: {
+      4: '4px',
     },
     screens: {
       xsm: '515px',

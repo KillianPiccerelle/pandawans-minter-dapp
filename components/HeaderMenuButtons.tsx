@@ -23,11 +23,8 @@ export const HeaderMenuButtons: FC<HeaderMenuButtonsProps> = ({ enabled }) => {
     <div className="flex gap-5 items-center xsm:flex-col">
       {enabled.includes('about') && (
         <button
-          className="text-white hover:outline-none"
-          variant="link"
-          color="pandawans.white"
-          _focus={{ outline: 'none' }}
-          mr={2}
+          className="text-white hover:outline-none mr-2"
+          /**variant="link"**/
           onClick={handleAboutClick}
         >
           About
