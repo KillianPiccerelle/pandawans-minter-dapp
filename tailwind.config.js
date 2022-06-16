@@ -4,7 +4,6 @@ module.exports = {
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
   ],
-  darkMode: false,
   theme: {
     colors: {
       bgStripes: '#3A5779',
@@ -28,6 +27,9 @@ module.exports = {
     borderWidth: {
       0.5: '0.5px',
     },
+    borderRadius: {
+      10: '10px',
+    },
     fontFamily: {
       heading: 'Poppins, sans-serif',
       body: 'Poppins, sans-serif',
@@ -40,6 +42,7 @@ module.exports = {
     },
     screens: {
       xsm: '515px',
+      smm: '650px',
       mlg: '800px',
     },
     extend: {
