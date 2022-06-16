@@ -1,3 +1,80 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply min-h-screen overflow-x-hidden font-body bg-white text-white;
+    background-image: linear-gradient(
+      90deg,
+      theme('colors.bgStripes') 50%,
+      theme('colors.darkBase') 100%
+    );
+    min-width: theme('minWidth.screen');
+  }
+}
+
+* {
+  scrollbar-color: theme('colors.white') theme('colors.darkBase');
+  scrollbar-width: auto;
+  /* width */
+  &::-webkit-scrollbar {
+    width: 1.5;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: theme('colors.darkBase');
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: theme('colors.light');
+    border-radius: 1.5;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #a0aec0;
+  }
+}
+
+.myContainer {
+  width: 100%;
+  -webkit-margin-start: auto;
+  margin-inline-start: auto;
+  -webkit-margin-end: auto;
+  margin-inline-end: auto;
+  max-width: 1280px;
+  -webkit-padding-start: 1rem;
+  padding-inline-start: 1rem;
+  -webkit-padding-end: 1rem;
+  padding-inline-end: 1rem;
+}
+
+.nothing {
+}
+
+.actionButton {
+  border-color: theme('colors.color2Darker');
+  border-width: 2px;
+  background-color: theme('colors.transparent');
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  -webkit-padding-start: 1.5rem;
+  padding-inline-start: 1.5rem;
+  -webkit-padding-end: 1.5rem;
+  padding-inline-end: 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 400;
+  cursor: pointer;
+  color: theme('colors.white');
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  width: auto;
+  opacity: 1;
+}

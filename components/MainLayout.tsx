@@ -19,12 +19,9 @@ export const MainLayout: FC<MetaHeadProps> = memo(
           metaImage={metaImage}
           metaUrl={metaUrl}
         ></MetaHead>
-        <div
-          className="bg-gradient-to-r from-bgStripes to-darkBase"
-          style={width_height}
-        >
-          <div className="">
-            <div>{children}</div>
+        <div style={width_height}>
+          <div className="myContainer">
+            <div className="nothing">{children}</div>
           </div>
         </div>
         <Footer />

@@ -11,7 +11,7 @@ const Home: NextPage = () => {
         <HeaderMenu>
           <HeaderMenuButtons enabled={['auth', 'mint', 'about']} />
         </HeaderMenu>
-        <div className="flex justifyContent-space-between mt-8 xl:mt-12 2xl:mt-24">
+        <div className="flex justifyContent-space-between mt-8 xl:mt-12 2xl:mt-8">
           <Hero />
         </div>
       </div>

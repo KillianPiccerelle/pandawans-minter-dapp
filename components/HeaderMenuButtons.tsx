@@ -20,7 +20,7 @@ export const HeaderMenuButtons: FC<HeaderMenuButtonsProps> = ({ enabled }) => {
   }, [router]);
 
   return (
-    <div className="flex gap-5 items-center xsm:flex-col">
+    <div className="flex gap-5 items-center">
       {enabled.includes('about') && (
         <button
           className="text-white hover:outline-none mr-2"
