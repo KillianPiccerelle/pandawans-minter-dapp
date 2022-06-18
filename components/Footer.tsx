@@ -3,7 +3,7 @@ import packageJson from '../package.json';
 export const Footer = () => {
   return (
     <div className="w-screen h-30 bg-darker text-white flex items-center justify-center">
-      <div className="max-w-7xl text-sm font-normal text-center">
+      <div className="myContainer text-sm font-normal text-center">
         <div>Elven Tools Dapp Template (v{`${packageJson.version}`})</div>
         <div className="text-xs font-thin">
           All for free. Please support the project. Give it credit and tell the

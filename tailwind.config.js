@@ -41,6 +41,7 @@ module.exports = {
     minWidth: {
       screen: '100vw',
       4: '4px',
+      400: '400px',
     },
     screens: {
       xsm: '515px',
@@ -51,6 +52,7 @@ module.exports = {
       height: {
         30: '120px',
         17: '70px',
+        100: '400px'
       },
     },
   },

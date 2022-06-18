@@ -39,6 +39,11 @@
   }
 }
 
+.mainLayout {
+  height: 'calc(100vh - 120px)';
+  width: '100vw';
+}
+
 .myContainer {
   width: 100%;
   -webkit-margin-start: auto;
@@ -77,4 +82,19 @@
   transition: background-color 0.3s;
   width: auto;
   opacity: 1;
+}
+
+.heroImage {
+  padding: 10;
+  bgcolor: 'theme("colors.darker")';
+  borderradius: '2xl';
+  userselect: 'none';
+  boxshadow: '0 0 25px';
+  color: 'theme("colors.shadowColor")';
+  display: 'flex';
+  background-image: linear-gradient(
+    90deg,
+    theme('colors.darkBase') 0%,
+    theme('colors.darker') 70%
+  );
 }
