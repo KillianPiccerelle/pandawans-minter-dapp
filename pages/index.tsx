@@ -21,10 +21,9 @@ const Home: NextPage = () => {
       </div>
 
       <Faq />
+      <Roadmap />
     </MainLayout>
   );
 };
 
 export default Home;
-
-<style>height {}</style>;
