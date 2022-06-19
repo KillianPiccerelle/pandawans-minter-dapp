@@ -1,4 +1,4 @@
-import { Box, Spinner, Text } from '@chakra-ui/react';
+import { Spinner } from 'flowbite-react';
 import { FC } from 'react';
 
 interface NFTMintedAlreadyProps {
@@ -11,31 +11,16 @@ export const NFTMintedAlready: FC<NFTMintedAlreadyProps> = ({
   dataLoading,
 }) => {
   return (
-    <Box
-      display="flex"
-      alignItems="center"
-      justifyContent={{ base: 'center', md: 'flex-start' }}
-    >
-      <Text fontSize={{ base: 'md', sm: 'xl' }} fontWeight="bold">
-        You have minted:{' '}
-      </Text>
+    <div className="flex items-center justify-start">
+      <p className="text-xl font-bold">You have minted: </p>
 
       {dataLoading ? (
-        <Spinner ml={3} color="pandawans.color2.base" />
+        <Spinner color="info" aria-label="Info spinner example" />
       ) : (
-        <Text
-          color="pandawans.color2.base"
-          fontSize="3xl"
-          fontWeight="black"
-          ml={3}
-        >
-          {data}
-        </Text>
+        <p className="text-color2Base text-3xl font-black ml-3">{data}</p>
       )}
 
-      <Text fontSize={{ base: 'md', sm: 'xl' }} fontWeight="bold" ml={3}>
-        in total
-      </Text>
-    </Box>
+      <p className="text-xl font-body ml-3">in total</p>
+    </div>
   );
 };

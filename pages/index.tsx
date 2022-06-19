@@ -6,6 +6,7 @@ import { HeaderMenuButtons } from '../components/HeaderMenuButtons';
 import { HeroImage } from '../components/HeroImage';
 import { Faq } from '../components/Faq';
 import { Roadmap } from '../components/Roadmap';
+import { Team } from '../components/Team';
 
 const Home: NextPage = () => {
   return (
@@ -22,6 +23,7 @@ const Home: NextPage = () => {
 
       <Faq />
       <Roadmap />
+      <Team />
     </MainLayout>
   );
 };

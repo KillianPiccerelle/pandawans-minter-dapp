@@ -1,4 +1,4 @@
-import { Box, Spinner, Text } from '@chakra-ui/react';
+import { Spinner } from 'flowbite-react';
 import { FC } from 'react';
 import { isDropActive } from '../config/nftSmartContract';
 
@@ -14,26 +14,17 @@ export const NFTLeftToMint: FC<NFTLeftToMintProps> = ({
   dataLoading,
 }) => {
   return (
-    <Box
-      display="flex"
-      alignItems="center"
-      justifyContent={{ base: 'center', md: 'flex-start' }}
-    >
-      <Text fontSize={{ base: 'md', sm: 'xl' }} fontWeight="bold">
+    <div className="flex items-center justify-start">
+      <p className="text-xl font-bold">
         {isDropActive ? 'Current drop' : 'Total'} NFTs left to mint:{' '}
-      </Text>
+      </p>
       {dataLoading ? (
-        <Spinner ml={3} color="pandawans.color2.base" />
+        <Spinner color="info" aria-label="Info spinner example" />
       ) : (
-        <Text
-          color="pandawans.color2.base"
-          fontSize="3xl"
-          fontWeight="black"
-          ml={3}
-        >
+        <p className="text-color2Base text-3xl font-black ml-3">
           {isDropActive ? dropData : data}
-        </Text>
+        </p>
       )}
-    </Box>
+    </div>
   );
 };

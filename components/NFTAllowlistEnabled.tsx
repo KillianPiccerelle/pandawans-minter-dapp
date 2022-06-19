@@ -1,4 +1,4 @@
-import { Box, Spinner, Text } from '@chakra-ui/react';
+import { Spinner } from 'flowbite-react';
 import { FC } from 'react';
 import { isAllowlistEnabled } from '../config/nftSmartContract';
 
@@ -14,51 +14,21 @@ export const NFTAllowlistEnabled: FC<NFTAllowlistEnabledProps> = ({
   return (
     <>
       {isAllowlistEnabled && (
-        <Box
-          display="flex"
-          alignItems="center"
-          mt={2}
-          mb={2}
-          justifyContent={{ base: 'center', md: 'flex-start' }}
-        >
-          <Box>
-            <Text
-              as="span"
-              fontSize={{ base: 'md', sm: 'xl' }}
-              fontWeight="bold"
-            >
+        <div className="flex items-center mt-2 mb-2 justify-start">
+          <div>
+            <span className="text-xl font-bold">
               Allowlist is enabled. You are{' '}
-            </Text>
+            </span>
             {dataLoading ? (
-              <Spinner ml={3} color="pandawans.color2.base" />
+              <Spinner color="info" aria-label="Info spinner example" />
             ) : Number(data) !== 0 ? (
-              <Text
-                color="pandawans.color2.base"
-                as="span"
-                fontWeight="bold"
-                fontSize={{ base: 'md', sm: 'xl' }}
-              >
-                on
-              </Text>
+              <span className="text-color2Base font-bold text-xl">on</span>
             ) : (
-              <Text
-                color="pandawans.color3.base"
-                as="span"
-                fontWeight="bold"
-                fontSize={{ base: 'md', sm: 'xl' }}
-              >
-                not on
-              </Text>
+              <span className=" text-color3Base text-bold text-xl">not on</span>
             )}{' '}
-            <Text
-              as="span"
-              fontSize={{ base: 'md', sm: 'xl' }}
-              fontWeight="bold"
-            >
-              the list!
-            </Text>
-          </Box>
-        </Box>
+            <span className="text-xl font-bold">the list!</span>
+          </div>
+        </div>
       )}
     </>
   );
