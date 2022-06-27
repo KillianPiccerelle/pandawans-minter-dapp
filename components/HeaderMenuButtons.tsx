@@ -23,7 +23,7 @@ export const HeaderMenuButtons: FC<HeaderMenuButtonsProps> = ({ enabled }) => {
     <div className="flex gap-5 items-center">
       {enabled.includes('about') && (
         <button
-          className="text-white hover:outline-none mr-2"
+          className="text-white font-bold hover:outline-none mr-2"
           /**variant="link"**/
           onClick={handleAboutClick}
         >

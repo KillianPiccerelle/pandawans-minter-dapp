@@ -18,7 +18,7 @@ export const CollectionInfoBox: FC<CollectionInfoBoxProps> = ({
 
   return (
     <Tooltip content={label}>
-      <div className="py-3 px-8 border-dashed border-white border-0.5 rounded-md">
+      <div className="py-3 px-8 border-dashed border-white border-0.5 rounded-lg">
         <p className="font-normal">
           {href ? (
             <a href={href} target="_blank" rel="noopener noreferrer nofollow">

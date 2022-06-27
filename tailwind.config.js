@@ -28,15 +28,9 @@ module.exports = {
     borderWidth: {
       0.5: '0.5px',
     },
-    borderRadius: {
-      10: '10px',
-    },
     fontFamily: {
       heading: 'Poppins, sans-serif',
       body: 'Poppins, sans-serif',
-    },
-    fontSize: {
-      xxs: ['10px', '14px'],
     },
     minWidth: {
       screen: '100vw',
