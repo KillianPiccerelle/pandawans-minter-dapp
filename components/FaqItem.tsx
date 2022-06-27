@@ -8,7 +8,7 @@ interface FaqItemProps {
 
 export const FaqItem: FC<FaqItemProps> = ({ question, answer }) => {
   return (
-    <Accordion alwaysOpen={true}>
+    <Accordion alwaysOpen={false}>
       <Accordion.Panel>
         <Accordion.Title>{question}</Accordion.Title>
         <Accordion.Content>
