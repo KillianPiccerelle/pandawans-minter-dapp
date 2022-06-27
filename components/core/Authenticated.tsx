@@ -1,32 +1,25 @@
+import { Spinner } from 'flowbite-react';
 import { FC, ReactElement } from 'react';
-import { Spinner, Flex } from '@chakra-ui/react';
+
 import { useLoggingIn } from '../../hooks/auth/useLoggingIn';
 
 interface AuthenticatedProps {
   fallback?: ReactElement;
   noSpinner?: boolean;
-  spinnerCentered?: boolean;
 }
 
 export const Authenticated: FC<AuthenticatedProps> = ({
   children,
   fallback = null,
   noSpinner = false,
-  spinnerCentered = false,
 }) => {
   const { isLoggingIn, isLoggedIn } = useLoggingIn();
 
   if (isLoggingIn)
     return noSpinner ? null : (
-      <Flex justify={spinnerCentered ? 'center' : 'flex-start'}>
-        <Spinner
-          thickness="3px"
-          speed="0.4s"
-          color="pandawans.color2.base"
-          size="md"
-          mt={3}
-        />
-      </Flex>
+      <div className="flex justify-center">
+        <Spinner color="info" aria-label="Info spinner example" />
+      </div>
     );
 
   if (!isLoggedIn) return fallback;

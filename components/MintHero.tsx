@@ -1,4 +1,3 @@
-import { Box, Text, useBreakpointValue } from '@chakra-ui/react';
 import { useCallback } from 'react';
 import { Address } from '@elrondnetwork/erdjs';
 import { useScQuery, SCQueryType } from '../hooks/interaction/useScQuery';
@@ -121,50 +120,31 @@ export const MintHero = () => {
     return leftPerDrop;
   }, [allowlistCheckData, mintedData, mintedPerDropData]);
 
-  const isContentCentered = useBreakpointValue({ base: true, md: false });
-
   return (
-    <Box width="100%">
-      <Text
-        as="h1"
-        fontSize={{ base: '2xl', md: '3xl', lg: '5xl' }}
-        textAlign={{ base: 'center', md: 'left' }}
-        fontWeight="black"
-        lineHeight="shorter"
-        mb={5}
-      >
+    <div className="w-full">
+      <h1 className="text-5xl text-left font-black line-snug mb-5">
         ⚡ Mint some of them
-      </Text>
-      <Text
-        as="h2"
-        fontSize="lg"
-        fontWeight="thin"
-        textAlign={{ base: 'center', md: 'left' }}
-      >
+      </h1>
+      <h2 className="text-lg font-thin text-left">
         To be able to mint you have to be logged in to be able to mint. Remember
         that it will mint only on the devent. If you want to do that, you need
         to connect using one of the methods and the devnet address with some
         xEGLD funds.
-      </Text>
+      </h2>
       {isMintingStarted ? (
-        <Box mt={6}>
+        <div className="mt-6">
           <NFTLeftToMint
             data={data}
             dropData={dropData}
             dataLoading={isDropActive ? dropIsLoading : totalIsLoading}
           />
-          <Box>
+          <div>
             <Authenticated
               fallback={
-                <Box
-                  mt={6}
-                  display="flex"
-                  justifyContent={isContentCentered ? 'center' : 'flex-start'}
-                >
+                <div className="mt-6 flex justify-center">
                   <LoginModalButton />
-                </Box>
+                </div>
               }
-              spinnerCentered={isContentCentered}
             >
               <NFTAllowlistEnabled
                 data={allowlistCheckData}
@@ -182,47 +162,29 @@ export const MintHero = () => {
                 leftToMintForUser={getLeftToMintForUser()}
               />
               {mintedData && mintedData > 0 && (
-                <Box
-                  display="flex"
-                  alignItems="center"
-                  mt={6}
-                  justifyContent={{ base: 'center', md: 'flex-start' }}
-                >
-                  <Text
-                    as="span"
-                    fontSize={{ base: 'md', sm: 'xl' }}
-                    fontWeight="bold"
-                  >
-                    Check your NFTs:
-                  </Text>
-                  <Text
-                    as="a"
-                    ml={3}
+                <div className="flex items-center m-6 justify-start">
+                  <span className="text-xl font-bold">Check your NFTs:</span>
+                  <a
+                    className="ml-3 text-color2Base text-2xl font-black decoration-1"
                     target="_blank"
-                    color="pandawans.color2.base"
-                    fontSize="2xl"
-                    fontWeight="black"
-                    textDecoration="underline"
                     rel="noopener noreferrer nofollow"
                     href={`${networkConfig[chainType].explorerAddress}/accounts/${address}/nfts`}
                   >
                     here
-                  </Text>
-                </Box>
+                  </a>
+                </div>
               )}
             </Authenticated>
-          </Box>
-        </Box>
+          </div>
+        </div>
       ) : (
-        <Box>
-          <Text fontSize="2xl" fontWeight="bold" mt={10}>
+        <div>
+          <p className="text-2xl font-bold m-10">
             Minting was not started yet.
-          </Text>
-          <Text fontSize="2xl" fontWeight="bold">
-            Please be back soon!
-          </Text>
-        </Box>
+          </p>
+          <p className="text-2xl font-bold">Please be back soon!</p>
+        </div>
       )}
-    </Box>
+    </div>
   );
 };
