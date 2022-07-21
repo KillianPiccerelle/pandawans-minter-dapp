@@ -9,8 +9,10 @@ const About: NextPage = () => {
       <HeaderMenu>
         <HeaderMenuButtons enabled={['auth', 'mint', 'about']} />
       </HeaderMenu>
-      <div className="mb-40">
+
+      <div className="mb-[165px]">
         <h2 className="mt-16 mb-10 text-4xl font-black">About</h2>
+
         <p className="mb-4">
           This demo page is a full-featured minting landing page that will work
           well with the Elven Tools smart contract. You can use{' '}

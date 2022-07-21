@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply min-h-screen overflow-x-hidden font-body bg-white text-white;
+    @apply overflow-x-hidden font-body bg-white text-white;
     background-image: linear-gradient(
       90deg,
       theme('colors.bgStripes') 50%,
